@@ -38,6 +38,5 @@
 <project name="dpdk" remote="tungstenfabric-preview" revision="contrail_dpdk_18_05_1" path="third_party/dpdk" />
 <!-- specs repository contains per-branch directories, use master revision explicitly -->
 <project name="specs" remote="tungstenfabric-preview" revision="master" path="contrail-specs" />
-<project name="test" remote="tungstenfabric-preview" path="third_party/contrail-test" />
-
+<project name="test" remote="tungstenfabric-preview" path="third_party/contrail-test"/>
 </manifest>
