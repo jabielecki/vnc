@@ -1,45 +1,44 @@
 <manifest>
-<remote name="github" fetch="https://github.com/Juniper"/>
+<remote name="tungstenfabric-preview" fetch="https://github.com/tungstenfabric-preview"/>
+<remote name="tungstenfabric-tools-preview" fetch="https://github.com/tungstenfabric-tools-preview"/>
 
 <default revision="refs/heads/master" remote="github"/>
 
-<project name="contrail-build" remote="github" revision="R5.0" path="tools/build">
+<project name="build" remote="tungstenfabric-tools-preview" revision="R5.0" path="tools/build">
   <copyfile src="SConstruct" dest="SConstruct"/>
 </project>
-<project name="contrail-controller" remote="github" revision="R5.0" path="controller"/>
-<project name="contrail-vrouter" remote="github" revision="R5.0" path="vrouter"/>
-<project name="contrail-third-party" remote="github" revision="R5.0" path="third_party"/>
-<project name="contrail-sandesh" remote="github" revision="R5.0" path="tools/sandesh"/>
-<project name="contrail-common" remote="github" revision="R5.0" path="src/contrail-common"/>
-<project name="contrail-analytics" remote="github" revision="R5.0" path="src/contrail-analytics"/>
-<project name="contrail-api-client" remote="github" revision="R5.0" path="src/contrail-api-client"/>
-<!-- Packages are split between contrail-packages and contrail-packaging -->
-<project name="contrail-packages" remote="github" revision="R5.0" path="tools/packages">
+<project name="controller" remote="tungstenfabric-preview" revision="R5.0" path="controller"/>
+<project name="vrouter" remote="tungstenfabric-preview" revision="R5.0" path="vrouter"/>
+<project name="third-party" remote="tungstenfabric-tools-preview" revision="R5.0" path="third_party"/>
+<project name="common" remote="tungstenfabric-preview" revision="R5.0" path="src/contrail-common"/>
+<project name="sandesh" remote="tungstenfabric-preview" revision="R5.0" path="tools/sandesh"/>
+<project name="analytics" remote="tungstenfabric-preview" revision="R5.0" path="src/contrail-analytics"/>
+<project name="api-client" remote="tungstenfabric-preview" revision="R5.0" path="src/contrail-api-client"/>
+<project name="contrail-packages" remote="tungstenfabric-tools-preview" revision="R5.0" path="tools/packages">
   <copyfile src="packages.make" dest="packages.make"/>
 </project>
-<project name="contrail-provisioning" remote="github" revision="R5.0" path="tools/provisioning"/>
-<project name="contrail-nova-vif-driver" remote="github" revision="R5.0" path="openstack/nova_contrail_vif"/>
-<project name="contrail-neutron-plugin" remote="github" revision="R5.0" path="openstack/neutron_plugin"/>
-<project name="contrail-heat" remote="github"  revision="R5.0" path="openstack/contrail-heat"/>
-<project name="contrail-web-storage" remote="github" revision="R5.0"/>
-<project name="contrail-web-server-manager" remote="github" revision="R5.0"/>
-<project name="contrail-web-controller" remote="github" revision="R5.0"/>
-<project name="contrail-web-core" remote="github" revision="R5.0"/>
-<project name="contrail-webui-third-party" remote="github" revision="R5.0" path="contrail-webui-third-party"/>
-<project name="contrail-tripleo-puppet" remote="github" revision="stable/queens" path="openstack/contrail-tripleo-puppet"/>
+<project name="provisioning" remote="tungstenfabric-tools-preview" revision="R5.0" path="tools/provisioning"/>
+<project name="nova-vif-driver" remote="tungstenfabric-preview" revision="R5.0" path="openstack/nova_contrail_vif"/>
+<project name="neutron-plugin" remote="tungstenfabric-preview" revision="R5.0" path="openstack/neutron_plugin"/>
+<project name="openstack-heat" remote="tungstenfabric-preview"  revision="R5.0" path="openstack/contrail-heat"/>
+<project name="web-storage" remote="tungstenfabric-preview" revision="R5.0" path="contrail-web-storage"/>
+<project name="web-server-manager" remote="tungstenfabric-preview" revision="R5.0" path="contrail-web-server-manager"/>
+<project name="web-controller" remote="tungstenfabric-preview" revision="R5.0" path="contrail-web-controller"/>
+<project name="web-core" remote="tungstenfabric-preview" revision="R5.0" path="contrail-web-core"/>
+<project name="webui-third-party" remote="tungstenfabric-preview" revision="R5.0" path="contrail-webui-third-party"/>
+<project name="tripleo-puppet" remote="tungstenfabric-tools-preview" revision="stable/queens" path="openstack/contrail-tripleo-puppet"/>
 <!-- vCenter projects -->
-<project name="contrail-java-api" remote="github" revision="R5.0" path="java-api"/>
-<project name="vijava" remote="github" revision="R5.0" path="vijava"/>
-<project name="contrail-vcenter-plugin" remote="github" revision="R5.0" path="vcenter-plugin"/>
-<project name="contrail-vcenter-manager" remote="github" revision="R5.0" path="vcenter-manager"/>
-<project name="contrail-vrouter-java-api" remote="github" revision="R5.0" path="vrouter-java-api"/>
-<project name="contrail-vro-plugin" remote="github" revision="R5.0" path="vro-plugin"/>
+<project name="java-api" remote="tungstenfabric-preview" revision="R5.0" path="java-api"/>
+<project name="vijava" remote="tungstenfabric-preview" revision="R5.0" path="vijava"/>
+<project name="vcenter-plugin" remote="tungstenfabric-preview" revision="R5.0" path="vcenter-plugin"/>
+<project name="vcenter-manager" remote="tungstenfabric-preview" revision="R5.0" path="vcenter-manager"/>
+<project name="vrouter-java-api" remote="tungstenfabric-preview" revision="R5.0" path="vrouter-java-api"/>
+<project name="vro-plugin" remote="tungstenfabric-preview" revision="R5.0" path="vro-plugin"/>
 <!-- Used by OpenContrail CI jobs -->
-<project name="contrail-fabric-utils" remote="github" revision="R5.0" path="third_party/fabric-utils" />
-<project name="contrail-dpdk" remote="github" revision="contrail_dpdk_17_11_3" path="third_party/dpdk" />
+<project name="fabric-utils" remote="tungstenfabric-tools-preview" revision="R5.0" path="third_party/fabric-utils" />
+<project name="dpdk" remote="tungstenfabric-preview" revision="contrail_dpdk_17_11_3" path="third_party/dpdk" />
 <!-- contrail-specs repository contains per-branch directories, use master revision explicitly -->
-<project name="contrail-specs" remote="github" revision="master" path="contrail-specs" />
-<project name="contrail-test" remote="github" revision="R5.0" path="third_party/contrail-test" />
+<project name="specs" remote="tungstenfabric-preview" revision="master" path="contrail-specs" />
+<project name="test" remote="tungstenfabric-preview" revision="R5.0" path="third_party/contrail-test" />
 
 </manifest>
-
